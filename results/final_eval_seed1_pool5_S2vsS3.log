@@ -1,0 +1,16 @@
+dropped 20 groups from withheld benchmarks
+1175 groups loaded
+scoring S2 S1 + same-item siblings ...
+scoring S3 S2 + benchmark siblings ...
+saved /Users/vivamichu/Desktop/starting_kit/results/final_eval_seed1_pool5_max250_S2vsS3.csv
+
+                              b0      b1      b3      b7     b15     b31     alc
+model                                                                           
+S2 S1 + same-item siblings  0.25  0.2193  0.1934  0.1802  0.1714  0.1650  0.1944
+S3 S2 + benchmark siblings  0.25  0.2157  0.1908  0.1793  0.1711  0.1649  0.1929
+
+ALC difference to S2 S1 + same-item siblings (mean over draws, standard error):
+  S3 S2 + benchmark siblings     -0.0014  (se 0.0004)
+
+groups scored per draw: mean 6.5  distinct benchmarks: 36
+share of pairs with a sibling in their draw: 0.46

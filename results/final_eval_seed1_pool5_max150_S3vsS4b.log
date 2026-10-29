@@ -1,0 +1,16 @@
+dropped 20 groups from withheld benchmarks
+1175 groups loaded
+scoring S3 S2 + benchmark siblings ...
+scoring S4b S3 + Claude prior ...
+saved /Users/vivamichu/Desktop/starting_kit/results/final_eval_seed1_pool5_max150_S3vsS4b.csv
+
+                                b0      b1      b3      b7     b15     b31     alc
+model                                                                             
+S3 S2 + benchmark siblings  0.2500  0.2090  0.1863  0.1715  0.1632  0.1584  0.1868
+S4b S3 + Claude prior       0.2026  0.1905  0.1800  0.1685  0.1615  0.1576  0.1761
+
+ALC difference to S3 S2 + benchmark siblings (mean over draws, standard error):
+  S4b S3 + Claude prior          -0.0107  (se 0.0015)
+
+groups scored per draw: mean 8.6  distinct benchmarks: 22
+share of pairs with a sibling in their draw: 0.78

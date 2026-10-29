@@ -1,0 +1,16 @@
+dropped 20 groups from withheld benchmarks
+1175 groups loaded
+scoring S1 smoothed (p0 0.5, k 2) ...
+scoring S2 S1 + same-item siblings ...
+saved /Users/vivamichu/Desktop/starting_kit/results/final_eval_seed1_pool5_max250.csv
+
+                              b0      b1      b3      b7     b15     b31     alc
+model                                                                           
+S1 smoothed (p0 0.5, k 2)   0.25  0.2194  0.1936  0.1806  0.1725  0.1671  0.1949
+S2 S1 + same-item siblings  0.25  0.2193  0.1934  0.1802  0.1714  0.1650  0.1944
+
+ALC difference to S1 smoothed (p0 0.5, k 2) (mean over draws, standard error):
+  S2 S1 + same-item siblings     -0.0005  (se 0.0001)
+
+groups scored per draw: mean 6.5  distinct benchmarks: 36
+share of pairs with a sibling in their draw: 0.46

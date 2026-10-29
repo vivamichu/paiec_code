@@ -1,0 +1,3957 @@
+{
+  "revision": "54074453da7b9911be0f48e4c560be547bc84d21",
+  "benchmarks": [
+    {
+      "folder": "abstract_reason",
+      "name": "Abstract-Reason",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect or unsolved",
+        "1": "correct or solved"
+      },
+      "n_subjects": 1,
+      "n_items": 9089,
+      "n_responses": 9095
+    },
+    {
+      "folder": "adaptivestep",
+      "name": "AdaptiveStep candidate pools",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Answer fails the specified checker",
+        "1": "Answer passes the specified checker"
+      },
+      "n_subjects": 3,
+      "n_items": 4525,
+      "n_responses": 988160
+    },
+    {
+      "folder": "advprompter",
+      "name": "AdvPrompter",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "The released judge did not classify the response as unsafe.",
+        "1": "The released judge classified the response as unsafe (attack success)."
+      },
+      "n_subjects": 2,
+      "n_items": 50,
+      "n_responses": 100
+    },
+    {
+      "folder": "aegis",
+      "name": "AEGIS 2.0 response safety",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "native response_label is unsafe",
+        "1": "native response_label is safe"
+      },
+      "n_subjects": 1,
+      "n_items": 11500,
+      "n_responses": 11608
+    },
+    {
+      "folder": "afrieval",
+      "name": "MasakhaNER 1.0 and 2.0: released NER predictions",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "At least one predicted BIO tag differs from the original reference.",
+        "1": "All predicted BIO tags exactly match the original reference."
+      },
+      "n_subjects": 948,
+      "n_items": 35205,
+      "n_responses": 1403380
+    },
+    {
+      "folder": "afrimedqa",
+      "name": "AfriMed-QA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Extracted prediction does not match the reference letter",
+        "1": "Extracted prediction matches the reference letter"
+      },
+      "n_subjects": 34,
+      "n_items": 42494,
+      "n_responses": 302354
+    },
+    {
+      "folder": "agc_bench",
+      "name": "AGC-Bench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 83,
+      "n_items": 8600,
+      "n_responses": 449942
+    },
+    {
+      "folder": "agentdojo",
+      "name": "AgentDojo",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 29,
+      "n_items": 1081,
+      "n_responses": 69798
+    },
+    {
+      "folder": "agentic_review_perturbation",
+      "name": "Agentic Review Systems \u2014 Perturbation Benchmark",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "injected error not detected",
+        "1": "injected error detected"
+      },
+      "n_subjects": 3,
+      "n_items": 105,
+      "n_responses": 315
+    },
+    {
+      "folder": "agi_elo",
+      "name": "AGI-Elo",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 20,
+      "n_items": 13953,
+      "n_responses": 277106
+    },
+    {
+      "folder": "ai2d_test",
+      "name": "AI2D_TEST",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect_or_unparseable_model_output",
+        "1": "correct_answer"
+      },
+      "n_subjects": 254,
+      "n_items": 3088,
+      "n_responses": 784352
+    },
+    {
+      "folder": "aider",
+      "name": "Aider C++ prompting study",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded build or unit tests failed within the run budget",
+        "1": "Recorded build and unit tests passed within the run budget"
+      },
+      "n_subjects": 17,
+      "n_items": 26,
+      "n_responses": 5356
+    },
+    {
+      "folder": "algotune",
+      "name": "AlgoTune",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 18,
+      "n_items": 154,
+      "n_responses": 2772
+    },
+    {
+      "folder": "alignment_faking",
+      "name": "Alignment Faking (RL)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The released classifier did not report alignment-faking reasoning.",
+        "1": "The released classifier reported alignment-faking reasoning."
+      },
+      "n_subjects": 4278,
+      "n_items": 1464,
+      "n_responses": 2138969
+    },
+    {
+      "folder": "alpacaeval",
+      "name": "AlpacaEval 2.0 weighted preferences",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 221,
+      "n_items": 805,
+      "n_responses": 177892
+    },
+    {
+      "folder": "alpha_sql",
+      "name": "Alpha-SQL (BIRD dev)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "different_result_or_failed_predicted_query",
+        "1": "equal_complete_result_sets"
+      },
+      "n_subjects": 1,
+      "n_items": 1534,
+      "n_responses": 1534
+    },
+    {
+      "folder": "annotating_errors_wcf",
+      "name": "Annotating Errors in English Learners' Written Language (WCF)",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 5,
+      "n_items": 15344,
+      "n_responses": 15344
+    },
+    {
+      "folder": "appworld",
+      "name": "AppWorld",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 18,
+      "n_items": 585,
+      "n_responses": 10530
+    },
+    {
+      "folder": "arcagi",
+      "name": "ARC-AGI",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 80,
+      "n_items": 526,
+      "n_responses": 35260
+    },
+    {
+      "folder": "atmossci_bench",
+      "name": "AtmosSci-Bench",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 54,
+      "n_items": 2802,
+      "n_responses": 37421
+    },
+    {
+      "folder": "auditing_sabotage_bench",
+      "name": "Auditing Sabotage Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded verdict does not match the target, including uncertain verdicts",
+        "1": "Recorded verdict matches the target"
+      },
+      "n_subjects": 18,
+      "n_items": 68,
+      "n_responses": 1869
+    },
+    {
+      "folder": "autoresearchbench",
+      "name": "AutoResearchBench",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 1,
+      "n_items": 60,
+      "n_responses": 115
+    },
+    {
+      "folder": "averimatec",
+      "name": "AVerImaTeC",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Predicted verdict differs from the reference under the upstream comparison.",
+        "1": "Predicted verdict matches the reference under the upstream comparison."
+      },
+      "n_subjects": 1,
+      "n_items": 152,
+      "n_responses": 152
+    },
+    {
+      "folder": "babilong",
+      "name": "BABILong",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Answer fails the upstream substring-label comparison.",
+        "1": "Answer passes the upstream substring-label comparison."
+      },
+      "n_subjects": 83,
+      "n_items": 526202,
+      "n_responses": 2020951
+    },
+    {
+      "folder": "bbq",
+      "name": "BBQ",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The parsed choice differs from the reference option.",
+        "1": "The parsed choice matches the reference option."
+      },
+      "n_subjects": 7,
+      "n_items": 204201,
+      "n_responses": 380198
+    },
+    {
+      "folder": "beavertails",
+      "name": "BeaverTails",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The named judge flagged the generated answer as unsafe.",
+        "1": "The named judge did not flag the generated answer as unsafe."
+      },
+      "n_subjects": 4,
+      "n_items": 420,
+      "n_responses": 1680
+    },
+    {
+      "folder": "bedd_basalt",
+      "name": "BEDD: MineRL BASALT Evaluation Dataset",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 15,
+      "n_items": 46266,
+      "n_responses": 50951
+    },
+    {
+      "folder": "benger",
+      "name": "BenGER",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect normalized decision or nonpassing recorded case-solution grade.",
+        "1": "Correct normalized decision or passing recorded case-solution grade."
+      },
+      "n_subjects": 41,
+      "n_items": 760,
+      "n_responses": 9328
+    },
+    {
+      "folder": "bertaqa",
+      "name": "BertaQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Response text does not exactly match the correct letter",
+        "1": "Response text exactly matches the correct letter"
+      },
+      "n_subjects": 6,
+      "n_items": 51760,
+      "n_responses": 57072
+    },
+    {
+      "folder": "bigfinancebench",
+      "name": "BigFinanceBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 10,
+      "n_items": 600,
+      "n_responses": 9000
+    },
+    {
+      "folder": "biggen",
+      "name": "BiGGen-Bench",
+      "response_type": "likert_5",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "1": "Category 1 of the item-specific published score rubric.",
+        "2": "Category 2 of the item-specific published score rubric.",
+        "3": "Category 3 of the item-specific published score rubric.",
+        "4": "Category 4 of the item-specific published score rubric.",
+        "5": "Category 5 of the item-specific published score rubric."
+      },
+      "n_subjects": 103,
+      "n_items": 4589,
+      "n_responses": 979855
+    },
+    {
+      "folder": "bird_sql",
+      "name": "BIRD (text-to-SQL)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The published Petavue execution verdict is no match.",
+        "1": "The published Petavue execution verdict is a match."
+      },
+      "n_subjects": 120,
+      "n_items": 360,
+      "n_responses": 43200
+    },
+    {
+      "folder": "brace",
+      "name": "BRACE (CAF-Score decisions)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Released prediction disagrees with the evaluated annotation, including raw ties.",
+        "1": "Released prediction agrees with the evaluated annotation."
+      },
+      "n_subjects": 28,
+      "n_items": 12631,
+      "n_responses": 202096
+    },
+    {
+      "folder": "braveguard",
+      "name": "BraveGuard (historical guard decisions)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The guard classified the recorded trajectory as non-harmful.",
+        "1": "The guard classified the recorded trajectory as harmful."
+      },
+      "n_subjects": 3,
+      "n_items": 536,
+      "n_responses": 536
+    },
+    {
+      "folder": "bridging_gap",
+      "name": "Bridging-the-Gap African Languages",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The released or explicitly specified answer parser marks the response incorrect.",
+        "1": "The released or explicitly specified answer parser marks the response correct."
+      },
+      "n_subjects": 417,
+      "n_items": 132418,
+      "n_responses": 4706881
+    },
+    {
+      "folder": "care_enzymes",
+      "name": "CARE: Classification and Retrieval of Enzymes",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 22,
+      "n_items": 4136,
+      "n_responses": 16817
+    },
+    {
+      "folder": "causal_axioms",
+      "name": "Causal Axioms (Axiomatic Training)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 2,
+      "n_items": 4500,
+      "n_responses": 9000
+    },
+    {
+      "folder": "cellverse",
+      "name": "CellVerse",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect cell type",
+        "1": "correct cell type"
+      },
+      "n_subjects": 1,
+      "n_items": 748,
+      "n_responses": 748
+    },
+    {
+      "folder": "ceobench",
+      "name": "CEO-Bench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 18,
+      "n_items": 3,
+      "n_responses": 162
+    },
+    {
+      "folder": "ceval",
+      "name": "C-Eval",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The predicted option differs from the scoring reference under this item protocol.",
+        "1": "The predicted option equals the scoring reference under this item protocol."
+      },
+      "n_subjects": 11,
+      "n_items": 13951,
+      "n_responses": 14806
+    },
+    {
+      "folder": "chartmuseum",
+      "name": "ChartMuseum",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The upstream judge considers the predicted answer incorrect.",
+        "1": "The upstream judge considers the predicted answer correct."
+      },
+      "n_subjects": 1,
+      "n_items": 162,
+      "n_responses": 162
+    },
+    {
+      "folder": "chatgpt_drift",
+      "name": "ChatGPT Drift (LLMDrift)",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 12,
+      "n_items": 11479,
+      "n_responses": 46832
+    },
+    {
+      "folder": "chi_bench",
+      "name": "CHI-Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The recorded trial reward is failure.",
+        "1": "The recorded trial reward is success."
+      },
+      "n_subjects": 62,
+      "n_items": 775,
+      "n_responses": 7700
+    },
+    {
+      "folder": "chipbench",
+      "name": "ChiPBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 11,
+      "n_items": 230,
+      "n_responses": 1470
+    },
+    {
+      "folder": "clasheval",
+      "name": "ClashEval",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded incorrect answer.",
+        "1": "Recorded correct answer."
+      },
+      "n_subjects": 6,
+      "n_items": 12495,
+      "n_responses": 75216
+    },
+    {
+      "folder": "classroom_ai",
+      "name": "Classroom AI",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "unordered",
+      "meanings": {
+        "1": "Lower elementary (grades 1\u20132).",
+        "2": "Middle elementary (grades 3\u20134).",
+        "3": "Upper elementary (grades 5\u20136).",
+        "4": "Middle school (grades 7\u20139).",
+        "5": "High school (grades 10\u201312).",
+        "6": "College or adult (grade 13 and above)."
+      },
+      "n_subjects": 14,
+      "n_items": 734,
+      "n_responses": 10360
+    },
+    {
+      "folder": "cmmlu",
+      "name": "CMMLU",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The reference parser's extracted option does not exactly equal the recorded gold, including no match.",
+        "1": "The reference parser's extracted option exactly equals the recorded gold."
+      },
+      "n_subjects": 22,
+      "n_items": 23160,
+      "n_responses": 254804
+    },
+    {
+      "folder": "coffeebench",
+      "name": "CoffeeBench",
+      "response_type": "continuous_unbounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 7,
+      "n_items": 1,
+      "n_responses": 21
+    },
+    {
+      "folder": "complexbench",
+      "name": "ComplexBench",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 15,
+      "n_items": 1150,
+      "n_responses": 17250
+    },
+    {
+      "folder": "confagents",
+      "name": "ConfAgents",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "criterion not satisfied",
+        "1": "criterion satisfied"
+      },
+      "n_subjects": 4,
+      "n_items": 16,
+      "n_responses": 64
+    },
+    {
+      "folder": "corebench",
+      "name": "CORE-Bench",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 11,
+      "n_items": 270,
+      "n_responses": 1956
+    },
+    {
+      "folder": "critic_discernment_game",
+      "name": "Critic-Discernment Game",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The released extractive_match judgment is incorrect.",
+        "1": "The released extractive_match judgment is correct."
+      },
+      "n_subjects": 4,
+      "n_items": 1819,
+      "n_responses": 7276
+    },
+    {
+      "folder": "crow",
+      "name": "CROW",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "The historical attack keyword rule did not fire.",
+        "1": "The historical attack keyword rule fired."
+      },
+      "n_subjects": 34,
+      "n_items": 1984,
+      "n_responses": 5900
+    },
+    {
+      "folder": "cruxeval",
+      "name": "CRUXEval",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The original execution grader returned false.",
+        "1": "The original execution grader returned true."
+      },
+      "n_subjects": 31,
+      "n_items": 4000,
+      "n_responses": 992000
+    },
+    {
+      "folder": "csedb",
+      "name": "CSEDB",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 7,
+      "n_items": 2069,
+      "n_responses": 41922
+    },
+    {
+      "folder": "cseo_bench",
+      "name": "C-SEO Bench",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "No change under the released rank-difference rule."
+      },
+      "n_subjects": 4,
+      "n_items": 242265,
+      "n_responses": 259128
+    },
+    {
+      "folder": "das_med_hallucination",
+      "name": "DAS Medical Hallucination",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The recorded detector found no hallucination.",
+        "0.5": "The recorded detector was uncertain; not a probability or fractional correctness.",
+        "1": "The recorded detector reported at least one hallucination/error category."
+      },
+      "n_subjects": 15,
+      "n_items": 108,
+      "n_responses": 1965
+    },
+    {
+      "folder": "data_juicer2",
+      "name": "Data-Juicer 2.0",
+      "response_type": "continuous_unbounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "lower_is_better",
+      "meanings": null,
+      "n_subjects": 11,
+      "n_items": 12,
+      "n_responses": 22
+    },
+    {
+      "folder": "dataclawbench",
+      "name": "DataClawBench",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 8,
+      "n_items": 492,
+      "n_responses": 3936
+    },
+    {
+      "folder": "dave",
+      "name": "DAVE",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect multiple-choice answer",
+        "1": "correct multiple-choice answer"
+      },
+      "n_subjects": 8,
+      "n_items": 3922,
+      "n_responses": 19248
+    },
+    {
+      "folder": "dbpa",
+      "name": "DBPA (Distribution-Based Perturbation Analysis)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The recorded test rejects at alpha 0.05 (p-value < 0.05).",
+        "1": "The recorded test does not reject at alpha 0.05; this is not proof of equivalence or correctness."
+      },
+      "n_subjects": 10,
+      "n_items": 59,
+      "n_responses": 409
+    },
+    {
+      "folder": "decodingtrust",
+      "name": "DecodingTrust",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 11,
+      "n_items": 437586,
+      "n_responses": 2456958
+    },
+    {
+      "folder": "decompile_bench",
+      "name": "Decompile-Bench: released IDA and Ghidra outputs",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 2,
+      "n_items": 72059,
+      "n_responses": 141131
+    },
+    {
+      "folder": "devbench",
+      "name": "DevBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The target did not strictly outrank every distractor, including ties.",
+        "1": "The target strictly outranked every distractor."
+      },
+      "n_subjects": 19,
+      "n_items": 271,
+      "n_responses": 5149
+    },
+    {
+      "folder": "disco",
+      "name": "DIS-CO (MovieTection)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Saved title does not exactly match an accepted title.",
+        "1": "Saved title exactly matches an accepted title."
+      },
+      "n_subjects": 4,
+      "n_items": 28000,
+      "n_responses": 111906
+    },
+    {
+      "folder": "donotanswer",
+      "name": "Do-Not-Answer",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 6,
+      "n_items": 1876,
+      "n_responses": 11268
+    },
+    {
+      "folder": "doris_mae",
+      "name": "DORIS-MAE",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": {
+        "0": "DISAGREE: the abstract does not address the requirement.",
+        "1": "DISPUTE or AGREE: adaptable or partially addresses the requirement.",
+        "2": "CONCUR: directly and completely addresses the requirement."
+      },
+      "n_subjects": 1,
+      "n_items": 165104,
+      "n_responses": 165144
+    },
+    {
+      "folder": "dpai",
+      "name": "DPAI Arena",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 26,
+      "n_items": 306,
+      "n_responses": 4590
+    },
+    {
+      "folder": "dqvis",
+      "name": "DQVis expert-reviewed generations",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Bad: significant issue with the query/visualization pair.",
+        "1": "Improve: the visualization answers the question but could be improved.",
+        "2": "Good: the query and visualization are reasonable together."
+      },
+      "n_subjects": 1,
+      "n_items": 356,
+      "n_responses": 357
+    },
+    {
+      "folder": "dtap_bench",
+      "name": "DTap-Bench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 10,
+      "n_items": 13392,
+      "n_responses": 106570
+    },
+    {
+      "folder": "editbench",
+      "name": "EDIT-Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 44,
+      "n_items": 540,
+      "n_responses": 23328
+    },
+    {
+      "folder": "edu_circuit_hw",
+      "name": "EDU-CIRCUIT-HW",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Published judge reports a significant recognition error.",
+        "1": "Published judge reports no significant recognition errors."
+      },
+      "n_subjects": 6,
+      "n_items": 513,
+      "n_responses": 3078
+    },
+    {
+      "folder": "eduguardbench",
+      "name": "EduGuardBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 14,
+      "n_items": 7494,
+      "n_responses": 189873
+    },
+    {
+      "folder": "edumath",
+      "name": "EDUMATH",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 11,
+      "n_items": 76,
+      "n_responses": 16720
+    },
+    {
+      "folder": "egoschema",
+      "name": "EgoSchema (released LLoVi configurations)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded choice is incorrect or unparsed (-1).",
+        "1": "Recorded choice matches the public reference."
+      },
+      "n_subjects": 11,
+      "n_items": 4500,
+      "n_responses": 5500
+    },
+    {
+      "folder": "ehrflowbench",
+      "name": "EHRFlowBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The published framework manifest reports non-completion.",
+        "1": "The published framework manifest reports completion; report quality is not established by this flag."
+      },
+      "n_subjects": 7,
+      "n_items": 20,
+      "n_responses": 140
+    },
+    {
+      "folder": "elicitation_game",
+      "name": "The Elicitation Game",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The original evaluator did not mark the answer correct.",
+        "1": "The original evaluator marked the answer correct."
+      },
+      "n_subjects": 14,
+      "n_items": 2960,
+      "n_responses": 14070
+    },
+    {
+      "folder": "embodied_agent_interface",
+      "name": "Embodied Agent Interface",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 25,
+      "n_items": 100,
+      "n_responses": 2500
+    },
+    {
+      "folder": "emoji_attack",
+      "name": "Emoji Attack (released EasyJailbreak results)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "The original annotation does not mark this attempt as a successful jailbreak.",
+        "1": "The original annotation marks a successful jailbreak of the target model."
+      },
+      "n_subjects": 10,
+      "n_items": 15153,
+      "n_responses": 58860
+    },
+    {
+      "folder": "engdesign",
+      "name": "EngDesign",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The native evaluator records that the design did not pass.",
+        "1": "The native evaluator records that the design passed."
+      },
+      "n_subjects": 16,
+      "n_items": 101,
+      "n_responses": 5394
+    },
+    {
+      "folder": "engibench",
+      "name": "EngiBench",
+      "response_type": "continuous_unbounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "lower_is_better",
+      "meanings": null,
+      "n_subjects": 2,
+      "n_items": 9,
+      "n_responses": 18
+    },
+    {
+      "folder": "enginemt_qa",
+      "name": "EngineMT-QA (unambiguous single-choice release subset)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect under the released option-set exact-match rule.",
+        "1": "Correct under the released option-set exact-match rule."
+      },
+      "n_subjects": 1,
+      "n_items": 676,
+      "n_responses": 676
+    },
+    {
+      "folder": "erbench",
+      "name": "ERBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Released parsed answer does not match the gold answer",
+        "1": "Released parsed answer matches the gold answer"
+      },
+      "n_subjects": 8,
+      "n_items": 32163,
+      "n_responses": 213110
+    },
+    {
+      "folder": "evouna",
+      "name": "EVOUNA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 5,
+      "n_items": 5609,
+      "n_responses": 27548
+    },
+    {
+      "folder": "exploitgym",
+      "name": "ExploitGym",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Not judged on-target",
+        "1": "Judged on-target"
+      },
+      "n_subjects": 5,
+      "n_items": 1737,
+      "n_responses": 6357
+    },
+    {
+      "folder": "faithcot",
+      "name": "FaithCoT-Bench (released FINE-CoT generator measurements)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect parsed answer or human-annotated unfaithful reasoning, according to the item protocol.",
+        "1": "Correct parsed answer or human-annotated faithful reasoning, according to the item protocol."
+      },
+      "n_subjects": 4,
+      "n_items": 687,
+      "n_responses": 2728
+    },
+    {
+      "folder": "felm",
+      "name": "FELM (released ChatGPT segment annotations)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The released human annotation marks this segment as containing a factual error.",
+        "1": "The released human annotation marks this segment as factual."
+      },
+      "n_subjects": 1,
+      "n_items": 4412,
+      "n_responses": 4426
+    },
+    {
+      "folder": "fetv",
+      "name": "FETV",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 4,
+      "n_items": 20788,
+      "n_responses": 41576
+    },
+    {
+      "folder": "fewshot_ttt_bbh",
+      "name": "Few-Shot TTT (BIG-Bench Hard)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "unsuccessful",
+        "1": "successful"
+      },
+      "n_subjects": 11,
+      "n_items": 1310,
+      "n_responses": 7425
+    },
+    {
+      "folder": "fgbench",
+      "name": "FGBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 8,
+      "n_items": 7146,
+      "n_responses": 57168
+    },
+    {
+      "folder": "financebench",
+      "name": "FinanceBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect answer or refusal",
+        "1": "correct answer"
+      },
+      "n_subjects": 16,
+      "n_items": 150,
+      "n_responses": 2400
+    },
+    {
+      "folder": "find_interp",
+      "name": "FIND",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 5,
+      "n_items": 10397,
+      "n_responses": 10397
+    },
+    {
+      "folder": "finegrain_t2i",
+      "name": "FineGRAIN (T2I)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The specified failure mode is present.",
+        "1": "The specified failure mode is absent."
+      },
+      "n_subjects": 17,
+      "n_items": 760,
+      "n_responses": 12861
+    },
+    {
+      "folder": "frontieror",
+      "name": "FrontierOR",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 15,
+      "n_items": 180,
+      "n_responses": 2230
+    },
+    {
+      "folder": "genai_learning",
+      "name": "GenAI Learning",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 944,
+      "n_items": 162,
+      "n_responses": 29013
+    },
+    {
+      "folder": "ghosts_math",
+      "name": "GHOSTS",
+      "response_type": "likert_5",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "1": "Question misunderstood",
+        "2": "Entirely incorrect answer",
+        "3": "Partially correct answer",
+        "4": "Mostly correct answer",
+        "5": "Completely correct answer"
+      },
+      "n_subjects": 3,
+      "n_items": 478,
+      "n_responses": 1066
+    },
+    {
+      "folder": "goodai_ltm_benchmark",
+      "name": "GoodAI LTM Benchmark",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 37,
+      "n_items": 452,
+      "n_responses": 3507
+    },
+    {
+      "folder": "haiid",
+      "name": "HAIID",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect choice or neutral slider",
+        "1": "Correct choice"
+      },
+      "n_subjects": 1126,
+      "n_items": 152,
+      "n_responses": 71364
+    },
+    {
+      "folder": "hallusionbench",
+      "name": "HallusionBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect or unparseable output under the declared exact matcher",
+        "1": "Extracted answer equals the reference"
+      },
+      "n_subjects": 254,
+      "n_items": 1205,
+      "n_responses": 240857
+    },
+    {
+      "folder": "harmbench",
+      "name": "HarmBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "This evaluator did not mark attack success",
+        "1": "This evaluator marked attack success"
+      },
+      "n_subjects": 33,
+      "n_items": 62160,
+      "n_responses": 107274
+    },
+    {
+      "folder": "healthadminbench",
+      "name": "HealthAdminBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "At least one check required by this scoring protocol did not pass",
+        "1": "All checks required by this scoring protocol passed"
+      },
+      "n_subjects": 7,
+      "n_items": 540,
+      "n_responses": 7020
+    },
+    {
+      "folder": "helm_afr",
+      "name": "HELM African MMLU + Winogrande",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 22,
+      "n_items": 72223,
+      "n_responses": 745360
+    },
+    {
+      "folder": "helm_airbench",
+      "name": "AIR-Bench 2024",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 66,
+      "n_items": 7723,
+      "n_responses": 375804
+    },
+    {
+      "folder": "helm_anthropic_redteam",
+      "name": "Anthropic Red Team",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 81,
+      "n_items": 995,
+      "n_responses": 81000
+    },
+    {
+      "folder": "helm_bbq",
+      "name": "BBQ",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 81,
+      "n_items": 2000,
+      "n_responses": 81000
+    },
+    {
+      "folder": "helm_bold",
+      "name": "BOLD",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "lower_is_better",
+      "meanings": null,
+      "n_subjects": 42,
+      "n_items": 2028,
+      "n_responses": 42000
+    },
+    {
+      "folder": "helm_cleva",
+      "name": "HELM CLEVA (Chinese)",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 30,
+      "n_items": 7536,
+      "n_responses": 28724
+    },
+    {
+      "folder": "helm_harmbench",
+      "name": "HarmBench",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 81,
+      "n_items": 403,
+      "n_responses": 32400
+    },
+    {
+      "folder": "helm_real_toxicity_prompts",
+      "name": "RealToxicityPrompts",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "lower_is_better",
+      "meanings": null,
+      "n_subjects": 42,
+      "n_items": 2006,
+      "n_responses": 42000
+    },
+    {
+      "folder": "helm_simple_safety_tests",
+      "name": "SimpleSafetyTests",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 81,
+      "n_items": 100,
+      "n_responses": 8100
+    },
+    {
+      "folder": "helm_thaiexam",
+      "name": "HELM Thai Exam",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 42,
+      "n_items": 565,
+      "n_responses": 23730
+    },
+    {
+      "folder": "helm_xstest",
+      "name": "XSTest",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 81,
+      "n_items": 450,
+      "n_responses": 36450
+    },
+    {
+      "folder": "hivmedqa",
+      "name": "HIVMedQA",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 13,
+      "n_items": 2570,
+      "n_responses": 52900
+    },
+    {
+      "folder": "hle",
+      "name": "Humanity's Last Exam",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Published incorrect or pipeline-failure judgment",
+        "1": "Published correct judgment"
+      },
+      "n_subjects": 20,
+      "n_items": 2249,
+      "n_responses": 14588
+    },
+    {
+      "folder": "icpc2_code_selector",
+      "name": "ICPC-2 Code Selector",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect selection or abstention",
+        "1": "correct selection or abstention"
+      },
+      "n_subjects": 39,
+      "n_items": 2175,
+      "n_responses": 70905
+    },
+    {
+      "folder": "igakuqa",
+      "name": "IgakuQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 5,
+      "n_items": 2942,
+      "n_responses": 7355
+    },
+    {
+      "folder": "igakuqa119",
+      "name": "IgakuQA119",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect under the released grading rule",
+        "1": "Correct under the released grading rule"
+      },
+      "n_subjects": 1,
+      "n_items": 400,
+      "n_responses": 400
+    },
+    {
+      "folder": "ikp",
+      "name": "IKP",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "wrong answer or refusal",
+        "1": "correct answer"
+      },
+      "n_subjects": 170,
+      "n_items": 1400,
+      "n_responses": 268351
+    },
+    {
+      "folder": "image2struct",
+      "name": "Image2Struct",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 14,
+      "n_items": 30636,
+      "n_responses": 142968
+    },
+    {
+      "folder": "imagenet_hard",
+      "name": "ImageNet-Hard zoom study: ImageNet-A",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect class",
+        "1": "correct class"
+      },
+      "n_subjects": 13,
+      "n_items": 7496,
+      "n_responses": 97500
+    },
+    {
+      "folder": "imgedit",
+      "name": "ImgEdit-Bench: released BAGEL single-turn evaluation",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 1,
+      "n_items": 737,
+      "n_responses": 737
+    },
+    {
+      "folder": "indeterminacy",
+      "name": "Indeterminacy Experiments",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 9,
+      "n_items": 4284,
+      "n_responses": 386240
+    },
+    {
+      "folder": "ineqmath",
+      "name": "IneqMath",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect under the final-answer judge",
+        "1": "Correct under the final-answer judge"
+      },
+      "n_subjects": 1,
+      "n_items": 1000,
+      "n_responses": 1000
+    },
+    {
+      "folder": "infibench",
+      "name": "InfiBench",
+      "response_type": "continuous_unbounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 121,
+      "n_items": 369,
+      "n_responses": 699042
+    },
+    {
+      "folder": "interchangeable_token_embeddings",
+      "name": "Interchangeable Token Embeddings: released LTL alpha-renaming runs",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect or syntactically invalid predicted trace",
+        "1": "reference-equivalent or semantically satisfying predicted trace"
+      },
+      "n_subjects": 2,
+      "n_items": 199978,
+      "n_responses": 399956
+    },
+    {
+      "folder": "intercode",
+      "name": "InterCode",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 26,
+      "n_items": 2484,
+      "n_responses": 17740
+    },
+    {
+      "folder": "jailbreakbench",
+      "name": "JailbreakBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "Not classified as jailbroken by the specified judge",
+        "1": "Classified as jailbroken by the specified judge"
+      },
+      "n_subjects": 10,
+      "n_items": 2001,
+      "n_responses": 3074
+    },
+    {
+      "folder": "jetts",
+      "name": "JETTS generator response pool",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 8,
+      "n_items": 5940,
+      "n_responses": 328685
+    },
+    {
+      "folder": "judgetuning",
+      "name": "JudgeTuning LMSys human agreement",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Judge preference disagrees with the human preference",
+        "1": "Judge preference agrees with the human preference"
+      },
+      "n_subjects": 7,
+      "n_items": 3000,
+      "n_responses": 21000
+    },
+    {
+      "folder": "katakomba",
+      "name": "Katakomba",
+      "response_type": "continuous_unbounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 572,
+      "n_items": 38,
+      "n_responses": 28600
+    },
+    {
+      "folder": "kernelbench",
+      "name": "KernelBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Reported functional-correctness failure",
+        "1": "Reported functional-correctness success"
+      },
+      "n_subjects": 19,
+      "n_items": 250,
+      "n_responses": 73998
+    },
+    {
+      "folder": "kmmlu",
+      "name": "KMMLU",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded parsed prediction does not match the reference",
+        "1": "Recorded parsed prediction matches the reference"
+      },
+      "n_subjects": 30,
+      "n_items": 35015,
+      "n_responses": 1012300
+    },
+    {
+      "folder": "kormedmcqa",
+      "name": "KorMedMCQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded parsed prediction does not match the reference",
+        "1": "Recorded parsed prediction matches the reference"
+      },
+      "n_subjects": 7,
+      "n_items": 3009,
+      "n_responses": 21391
+    },
+    {
+      "folder": "kris_bench",
+      "name": "KRIS-Bench",
+      "response_type": "likert_5",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 20,
+      "n_items": 8941,
+      "n_responses": 130192
+    },
+    {
+      "folder": "lambda_fp_course",
+      "name": "Functional Programming Course LLM Evaluation",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 9,
+      "n_items": 152,
+      "n_responses": 6798
+    },
+    {
+      "folder": "lawbench",
+      "name": "LawBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 51,
+      "n_items": 233168,
+      "n_responses": 918000
+    },
+    {
+      "folder": "legal_rag_bench",
+      "name": "Legal RAG Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The specified grading criterion was not satisfied.",
+        "1": "The specified grading criterion was satisfied."
+      },
+      "n_subjects": 6,
+      "n_items": 300,
+      "n_responses": 1800
+    },
+    {
+      "folder": "legalbench",
+      "name": "LegalBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Published quasi-exact-match failure",
+        "1": "Published quasi-exact-match success"
+      },
+      "n_subjects": 31,
+      "n_items": 9393,
+      "n_responses": 63457
+    },
+    {
+      "folder": "lexeval",
+      "name": "LexEval",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 38,
+      "n_items": 39908,
+      "n_responses": 1076280
+    },
+    {
+      "folder": "lingoly",
+      "name": "LINGOLY",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "No accepted answer matches after the native normalization",
+        "1": "An accepted answer matches under the native exact-match rule"
+      },
+      "n_subjects": 11,
+      "n_items": 12463,
+      "n_responses": 24926
+    },
+    {
+      "folder": "live_agent_risk",
+      "name": "Live-Agent Risk",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The evaluated seat is not the recorded winner.",
+        "1": "The evaluated seat is the recorded winner."
+      },
+      "n_subjects": 31,
+      "n_items": 73,
+      "n_responses": 256
+    },
+    {
+      "folder": "liveaopsbench",
+      "name": "LiveAoPSBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Released leaderboard pass@1 is 0",
+        "1": "Released leaderboard pass@1 is 100"
+      },
+      "n_subjects": 13,
+      "n_items": 5323,
+      "n_responses": 69264
+    },
+    {
+      "folder": "livebench",
+      "name": "LiveBench",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 200,
+      "n_items": 1286,
+      "n_responses": 165334
+    },
+    {
+      "folder": "llm4ir",
+      "name": "LLM4IR (LaMIR)",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 19,
+      "n_items": 1804,
+      "n_responses": 5348
+    },
+    {
+      "folder": "llm_bp_tag",
+      "name": "LLM-BP TAG node-classification results",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The native parser did not select the reference category.",
+        "1": "The native parser selected the reference category."
+      },
+      "n_subjects": 1,
+      "n_items": 152139,
+      "n_responses": 158596
+    },
+    {
+      "folder": "llm_survey_simulation",
+      "name": "LLM survey-simulation responses (EEDI and OpinionQA)",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 8,
+      "n_items": 797,
+      "n_responses": 669350
+    },
+    {
+      "folder": "llm_uncertainty_bench",
+      "name": "LLM-Uncertainty-Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "First maximum-logit option differs from the reference",
+        "1": "First maximum-logit option equals the reference"
+      },
+      "n_subjects": 102,
+      "n_items": 149793,
+      "n_responses": 5100000
+    },
+    {
+      "folder": "llmail_inject",
+      "name": "LLMail-Inject",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "At least one required attack objective was false.",
+        "1": "All five attack objectives were satisfied; the target agent was compromised."
+      },
+      "n_subjects": 23,
+      "n_items": 207291,
+      "n_responses": 461593
+    },
+    {
+      "folder": "llms_lean_formalization",
+      "name": "LLMs-Lean historical evaluations of miniF2F and miniCTX",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Source verifier recorded Fail for this grading round",
+        "1": "Source recorded Pass, including explicitly retained earlier acceptance"
+      },
+      "n_subjects": 120,
+      "n_items": 588,
+      "n_responses": 64960
+    },
+    {
+      "folder": "lohi_drug_discovery",
+      "name": "Lo-Hi Drug Discovery Benchmark",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 213,
+      "n_items": 42080,
+      "n_responses": 1246925
+    },
+    {
+      "folder": "matharena",
+      "name": "MathArena",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 104,
+      "n_items": 1755,
+      "n_responses": 92944
+    },
+    {
+      "folder": "matharena_platform",
+      "name": "MathArena Platform",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 68,
+      "n_items": 1414,
+      "n_responses": 32503
+    },
+    {
+      "folder": "mathconstraint",
+      "name": "MathConstraint",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 12,
+      "n_items": 504,
+      "n_responses": 11862
+    },
+    {
+      "folder": "mathvista_mini",
+      "name": "MathVista MINI",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The frozen historical comparator reports no match.",
+        "1": "The frozen historical comparator reports a match."
+      },
+      "n_subjects": 263,
+      "n_items": 1000,
+      "n_responses": 285000
+    },
+    {
+      "folder": "medagentboard",
+      "name": "MedAgentBoard",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 83,
+      "n_items": 2301,
+      "n_responses": 16847
+    },
+    {
+      "folder": "medhelm_ehr_sql",
+      "name": "MedHELM EHRSQL",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 1000,
+      "n_responses": 13000
+    },
+    {
+      "folder": "medhelm_head_qa",
+      "name": "MedHELM HEAD-QA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 1000,
+      "n_responses": 13000
+    },
+    {
+      "folder": "medhelm_med_mcqa",
+      "name": "MedHELM MedMCQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 1000,
+      "n_responses": 13000
+    },
+    {
+      "folder": "medhelm_med_qa",
+      "name": "MedHELM MedQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 1000,
+      "n_responses": 13000
+    },
+    {
+      "folder": "medhelm_medbullets",
+      "name": "MedHELM Medbullets",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 298,
+      "n_responses": 4004
+    },
+    {
+      "folder": "medhelm_medcalc_bench",
+      "name": "MedHELM MedCalc-Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 992,
+      "n_responses": 13000
+    },
+    {
+      "folder": "medhelm_medec",
+      "name": "MedHELM MEDEC",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 597,
+      "n_responses": 7761
+    },
+    {
+      "folder": "medhelm_medhallu",
+      "name": "MedHELM MedHallu",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 2000,
+      "n_responses": 13000
+    },
+    {
+      "folder": "medhelm_pubmed_qa",
+      "name": "MedHELM PubMedQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 1500,
+      "n_responses": 11000
+    },
+    {
+      "folder": "medhelm_race_based_med",
+      "name": "MedHELM RaceBasedMed",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 13,
+      "n_items": 167,
+      "n_responses": 2171
+    },
+    {
+      "folder": "medwatermark_fws",
+      "name": "MedWatermark-FWS",
+      "response_type": "likert_5",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "1": "Lowest quality / strong disagreement in the published general rubric.",
+        "2": "Intermediate ordinal level; no separate verbal anchor is provided.",
+        "3": "Intermediate ordinal level; no separate verbal anchor is provided.",
+        "4": "Intermediate ordinal level; no separate verbal anchor is provided.",
+        "5": "Highest quality / strong agreement in the published general rubric."
+      },
+      "n_subjects": 72,
+      "n_items": 2376,
+      "n_responses": 24200
+    },
+    {
+      "folder": "mergebench",
+      "name": "MergeBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 2,
+      "n_items": 1813,
+      "n_responses": 3638
+    },
+    {
+      "folder": "mind2web",
+      "name": "Mind2Web candidate generation",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "No source positive candidate has a recorded rank below 50.",
+        "1": "At least one source positive candidate has a recorded rank below 50."
+      },
+      "n_subjects": 1,
+      "n_items": 17153,
+      "n_responses": 17153
+    },
+    {
+      "folder": "mj_bench",
+      "name": "MJ-Bench released judge observations",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "A recorded valid preference disagrees with the reference, or is a tie.",
+        "1": "A recorded valid preference agrees with the reference."
+      },
+      "n_subjects": 82,
+      "n_items": 26564,
+      "n_responses": 209509
+    },
+    {
+      "folder": "mlip_arena",
+      "name": "MLIP Arena",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 71,
+      "n_items": 13706,
+      "n_responses": 122640
+    },
+    {
+      "folder": "mlrbench",
+      "name": "MLR-Bench",
+      "response_type": "likert_10",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 6,
+      "n_items": 5226,
+      "n_responses": 31356
+    },
+    {
+      "folder": "mmbench_v11",
+      "name": "MMBench V1.1 recorded answers",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The historical deterministic extractor returns a different option or its explicit rejection marker.",
+        "1": "The historical deterministic extractor returns the reference option."
+      },
+      "n_subjects": 251,
+      "n_items": 12175,
+      "n_responses": 3262900
+    },
+    {
+      "folder": "mmdocrag",
+      "name": "MMDocRAG",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 68,
+      "n_items": 2000,
+      "n_responses": 342695
+    },
+    {
+      "folder": "mmedbench",
+      "name": "MMedBench (MedS-Ins rationale examples)",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 1,
+      "n_items": 300,
+      "n_responses": 300
+    },
+    {
+      "folder": "mmlu",
+      "name": "MMLU",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The recorded maximum-likelihood answer is incorrect.",
+        "1": "The recorded maximum-likelihood answer matches the reference."
+      },
+      "n_subjects": 150,
+      "n_items": 14015,
+      "n_responses": 2106300
+    },
+    {
+      "folder": "mmlupro",
+      "name": "MMLU-Pro",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Released predicted letter differs from the reference",
+        "1": "Released predicted letter matches the reference"
+      },
+      "n_subjects": 48,
+      "n_items": 14226,
+      "n_responses": 575807
+    },
+    {
+      "folder": "mmmu_dev_val",
+      "name": "MMMU_DEV_VAL",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect_answer",
+        "1": "correct_answer"
+      },
+      "n_subjects": 253,
+      "n_items": 1050,
+      "n_responses": 265650
+    },
+    {
+      "folder": "mmoral_bench",
+      "name": "MMOral-Bench recorded policies",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 85,
+      "n_items": 1069,
+      "n_responses": 28679
+    },
+    {
+      "folder": "mochi",
+      "name": "MOCHI",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 24,
+      "n_items": 3717,
+      "n_responses": 48456
+    },
+    {
+      "folder": "moe_cap",
+      "name": "MoE-CAP",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 50,
+      "n_items": 10065,
+      "n_responses": 65238
+    },
+    {
+      "folder": "monkey_power_laws",
+      "name": "Large Language Monkeys: Monkey Business",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The original released grader marked this sample incorrect.",
+        "1": "The original released grader marked this sample correct."
+      },
+      "n_subjects": 13,
+      "n_items": 525,
+      "n_responses": 28780000
+    },
+    {
+      "folder": "morphkv",
+      "name": "MorphKV results on LongGenBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Released judge verdict is no",
+        "1": "Released judge verdict is yes"
+      },
+      "n_subjects": 11,
+      "n_items": 537,
+      "n_responses": 4105
+    },
+    {
+      "folder": "morqa",
+      "name": "MORQA evaluator ratings",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 4,
+      "n_items": 5443,
+      "n_responses": 17136
+    },
+    {
+      "folder": "mtbbench",
+      "name": "MTBBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect recorded answer",
+        "1": "Correct recorded answer"
+      },
+      "n_subjects": 25,
+      "n_items": 573,
+      "n_responses": 8412
+    },
+    {
+      "folder": "mtbench",
+      "name": "MT-Bench",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 34,
+      "n_items": 2716,
+      "n_responses": 5440
+    },
+    {
+      "folder": "multi_moe",
+      "name": "Multi-MoE",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 11,
+      "n_items": 5140,
+      "n_responses": 9620
+    },
+    {
+      "folder": "multi_swebench",
+      "name": "Multi-SWE-bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 82,
+      "n_items": 2127,
+      "n_responses": 57975
+    },
+    {
+      "folder": "multimodal_stem_ai",
+      "name": "Multimodal STEM Assessments (Human-AI)",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 17,
+      "n_items": 249,
+      "n_responses": 4335
+    },
+    {
+      "folder": "mypcbench",
+      "name": "MyPCBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The recorded judge marked the rubric failed.",
+        "1": "The recorded judge marked the rubric passed."
+      },
+      "n_subjects": 6,
+      "n_items": 118,
+      "n_responses": 118
+    },
+    {
+      "folder": "naep_llm_students",
+      "name": "NAEP LLM-as-Student",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The recorded extracted choice differs from the released key.",
+        "1": "The recorded extracted choice equals the released key."
+      },
+      "n_subjects": 11,
+      "n_items": 488,
+      "n_responses": 53680
+    },
+    {
+      "folder": "nanobaselib",
+      "name": "NanoBaseLib RNA Modification Detection",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 10,
+      "n_items": 45970,
+      "n_responses": 319289
+    },
+    {
+      "folder": "naturalreasoning",
+      "name": "NaturalReasoning",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "No: reference verification fails one or more criteria",
+        "1": "Yes: reference verification meets all criteria"
+      },
+      "n_subjects": 1,
+      "n_items": 1145824,
+      "n_responses": 1145824
+    },
+    {
+      "folder": "naturebench",
+      "name": "NatureBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The published result does not meet Match-SOTA, including invalid or no-score results.",
+        "1": "A valid reported result has aggregate improvement g >= 0."
+      },
+      "n_subjects": 23,
+      "n_items": 181,
+      "n_responses": 2070
+    },
+    {
+      "folder": "nester",
+      "name": "NESTER",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The released human annotation marks this criterion unsatisfied.",
+        "1": "The released human annotation marks this criterion satisfied."
+      },
+      "n_subjects": 3,
+      "n_items": 356,
+      "n_responses": 1128
+    },
+    {
+      "folder": "nis3d",
+      "name": "NIS3D",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 6,
+      "n_items": 30,
+      "n_responses": 180
+    },
+    {
+      "folder": "nyu_ctf_bench",
+      "name": "NYU CTF Bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "published assessment reports no successful flag recovery within its stated allowance",
+        "1": "published assessment reports successful flag recovery within its stated allowance"
+      },
+      "n_subjects": 15,
+      "n_items": 400,
+      "n_responses": 2979
+    },
+    {
+      "folder": "oasst",
+      "name": "OpenAssistant OASST1: model-attributed assistant replies",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "original rank 0 in the reply comparison group (zero is most preferred)",
+        "1": "original rank 1 in the reply comparison group (zero is most preferred)",
+        "2": "original rank 2 in the reply comparison group (zero is most preferred)",
+        "3": "original rank 3 in the reply comparison group (zero is most preferred)",
+        "4": "original rank 4 in the reply comparison group (zero is most preferred)"
+      },
+      "n_subjects": 31,
+      "n_items": 1742,
+      "n_responses": 7575
+    },
+    {
+      "folder": "ocrbench_v2",
+      "name": "OCRBench v2",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 1,
+      "n_items": 9868,
+      "n_responses": 10000
+    },
+    {
+      "folder": "ood_prediction",
+      "name": "OOD-Prediction",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The target model was assigned to the released wrong bucket for this task.",
+        "1": "The target model was assigned to the released correct bucket for this task."
+      },
+      "n_subjects": 2,
+      "n_items": 142805,
+      "n_responses": 142805
+    },
+    {
+      "folder": "openbiorq",
+      "name": "OpenBioRQ",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "unsuccessful",
+        "1": "successful"
+      },
+      "n_subjects": 11,
+      "n_items": 657,
+      "n_responses": 7227
+    },
+    {
+      "folder": "os_harm",
+      "name": "OS-Harm",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": null,
+      "meanings": {
+        "0": "criterion not satisfied",
+        "1": "criterion satisfied"
+      },
+      "n_subjects": 7,
+      "n_items": 512,
+      "n_responses": 1740
+    },
+    {
+      "folder": "perfcodebench",
+      "name": "PerfCodeBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "candidate failed compilation, execution, timeout, output decoding, or task oracle checks",
+        "1": "candidate compiled and ran within its allowance and passed all repeated oracle checks"
+      },
+      "n_subjects": 20,
+      "n_items": 1854,
+      "n_responses": 23854
+    },
+    {
+      "folder": "perumedqa",
+      "name": "PeruMedQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "A parsed answer differs from the reference letter",
+        "1": "A parsed answer matches the reference letter"
+      },
+      "n_subjects": 11,
+      "n_items": 8259,
+      "n_responses": 92180
+    },
+    {
+      "folder": "phyblock",
+      "name": "PhyBlock",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 21,
+      "n_items": 1362,
+      "n_responses": 9524
+    },
+    {
+      "folder": "pku_saferlhf",
+      "name": "PKU-SafeRLHF",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The released annotation marks the response unsafe.",
+        "1": "The released annotation marks the response safe."
+      },
+      "n_subjects": 3,
+      "n_items": 39994,
+      "n_responses": 164236
+    },
+    {
+      "folder": "planbench",
+      "name": "PlanBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "invalid plan or recorded unsuccessful attempt",
+        "1": "valid plan or correctly recognized unsolvable problem"
+      },
+      "n_subjects": 42,
+      "n_items": 11076,
+      "n_responses": 38061
+    },
+    {
+      "folder": "preference_dissection",
+      "name": "Preference Dissection",
+      "response_type": "nominal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The model judge preferred response_2.",
+        "1": "The model judge preferred response_1."
+      },
+      "n_subjects": 32,
+      "n_items": 5239,
+      "n_responses": 167680
+    },
+    {
+      "folder": "prism",
+      "name": "PRISM Alignment",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 21,
+      "n_items": 53926,
+      "n_responses": 136742
+    },
+    {
+      "folder": "prm800k",
+      "name": "PRM800K",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "-1": "Bad: incorrect, unreasonable, inappropriate, or insufficiently explained.",
+        "0": "Okay: a reasonable step that does not substantially advance the solution; retain the native neutral rating.",
+        "1": "Great: a correct, reasonable and useful solution step under the phase-specific human instructions."
+      },
+      "n_subjects": 1,
+      "n_items": 973120,
+      "n_responses": 1701771
+    },
+    {
+      "folder": "programbench",
+      "name": "ProgramBench",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 28,
+      "n_items": 1317,
+      "n_responses": 4965
+    },
+    {
+      "folder": "proofaug",
+      "name": "ProofAug",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect or unsolved",
+        "1": "correct or solved"
+      },
+      "n_subjects": 1,
+      "n_items": 244,
+      "n_responses": 244
+    },
+    {
+      "folder": "proteininvbench",
+      "name": "ProteinInvBench",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 16,
+      "n_items": 7410,
+      "n_responses": 23872
+    },
+    {
+      "folder": "prox",
+      "name": "ProX Math CPT Evals",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "unsuccessful",
+        "1": "successful"
+      },
+      "n_subjects": 2,
+      "n_items": 12052,
+      "n_responses": 24298
+    },
+    {
+      "folder": "psychosis_bench",
+      "name": "Psychosis-bench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 8,
+      "n_items": 2688,
+      "n_responses": 2688
+    },
+    {
+      "folder": "putnam_axiom",
+      "name": "Putnam-AXIOM",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 2,
+      "n_items": 2500,
+      "n_responses": 5000
+    },
+    {
+      "folder": "pxplore",
+      "name": "Pxplore",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The original next-state criterion is explicitly marked not aligned.",
+        "1": "The original next-state criterion is explicitly marked aligned."
+      },
+      "n_subjects": 14,
+      "n_items": 787,
+      "n_responses": 4079
+    },
+    {
+      "folder": "qatch",
+      "name": "QATCH",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 6,
+      "n_items": 36458,
+      "n_responses": 61384
+    },
+    {
+      "folder": "radar",
+      "name": "RADAR",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 1,
+      "n_items": 1,
+      "n_responses": 1
+    },
+    {
+      "folder": "rakuda",
+      "name": "Rakuda",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 647,
+      "n_items": 280,
+      "n_responses": 64360
+    },
+    {
+      "folder": "rclicks",
+      "name": "RClicks: released clickability-model measurements",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 16,
+      "n_items": 29035,
+      "n_responses": 251820
+    },
+    {
+      "folder": "real_pocqi",
+      "name": "Real-POCQi",
+      "response_type": "win_rate",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Physician prefers the opponent",
+        "0.5": "Physician rates the pair equally",
+        "1": "Physician prefers this system"
+      },
+      "n_subjects": 4,
+      "n_items": 3100,
+      "n_responses": 11560
+    },
+    {
+      "folder": "real_webagents",
+      "name": "REAL",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 33,
+      "n_items": 233,
+      "n_responses": 4449
+    },
+    {
+      "folder": "realtimeqa",
+      "name": "RealTime QA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect under the original exact-match rule",
+        "1": "Correct under the original exact-match rule"
+      },
+      "n_subjects": 94,
+      "n_items": 7954,
+      "n_responses": 64822
+    },
+    {
+      "folder": "reasoning_gym",
+      "name": "Reasoning Gym: original zero-shot completions",
+      "response_type": "continuous_bounded",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 14,
+      "n_items": 56181,
+      "n_responses": 186250
+    },
+    {
+      "folder": "refgrader",
+      "name": "RefGrader",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": {
+        "0": "Grader assigned 0 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "1": "Grader assigned 1 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "2": "Grader assigned 2 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "3": "Grader assigned 3 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "4": "Grader assigned 4 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "5": "Grader assigned 5 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "6": "Grader assigned 6 of 7 proof-credit points; this is not a measure of grader accuracy",
+        "7": "Grader assigned 7 of 7 proof-credit points; this is not a measure of grader accuracy"
+      },
+      "n_subjects": 31,
+      "n_items": 3597,
+      "n_responses": 6046
+    },
+    {
+      "folder": "reliancescope",
+      "name": "RelianceScope",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The predicted engagement mode differs from the human reference on this axis.",
+        "1": "The predicted engagement mode matches the human reference on this axis."
+      },
+      "n_subjects": 24,
+      "n_items": 1200,
+      "n_responses": 7200
+    },
+    {
+      "folder": "researchclawbench",
+      "name": "ResearchClawBench",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 37,
+      "n_items": 40,
+      "n_responses": 1432
+    },
+    {
+      "folder": "researchcodebench",
+      "name": "ResearchCodeBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 31,
+      "n_items": 212,
+      "n_responses": 6784
+    },
+    {
+      "folder": "revolve",
+      "name": "REVOLVE",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect",
+        "1": "correct"
+      },
+      "n_subjects": 2,
+      "n_items": 310,
+      "n_responses": 3100
+    },
+    {
+      "folder": "rewardbench",
+      "name": "RewardBench",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Native incorrect preference verdict; may include nonfinite reward comparisons",
+        "0.5": "Native unresolved-judgment half credit; not necessarily a genuine tie",
+        "1": "Native correct preference verdict"
+      },
+      "n_subjects": 167,
+      "n_items": 4045,
+      "n_responses": 491343
+    },
+    {
+      "folder": "risebench",
+      "name": "RISEBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Does not meet the released completion rule.",
+        "1": "Meets the released completion rule."
+      },
+      "n_subjects": 23,
+      "n_items": 1080,
+      "n_responses": 8280
+    },
+    {
+      "folder": "robust_reasoning_benchmark",
+      "name": "Robust Reasoning Benchmark",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The native task-specific verifier recorded failure",
+        "1": "The native task-specific verifier recorded success"
+      },
+      "n_subjects": 31,
+      "n_items": 4895,
+      "n_responses": 146160
+    },
+    {
+      "folder": "safeagentbench",
+      "name": "SafeAgentBench (TRIDENT instruction decisions)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The released configuration allowed the instruction.",
+        "1": "The released configuration reported a block or refusal."
+      },
+      "n_subjects": 6,
+      "n_items": 665,
+      "n_responses": 4500
+    },
+    {
+      "folder": "scale_mrt",
+      "name": "Scale MRT (Monitor Red Teaming)",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 633,
+      "n_items": 34698,
+      "n_responses": 51491
+    },
+    {
+      "folder": "scbench_long",
+      "name": "scBench-Long",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 29,
+      "n_items": 4,
+      "n_responses": 346
+    },
+    {
+      "folder": "sciarena",
+      "name": "SciArena",
+      "response_type": "win_rate",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "other response preferred",
+        "0.5": "neither response preferred",
+        "1": "this response preferred"
+      },
+      "n_subjects": 23,
+      "n_items": 8393,
+      "n_responses": 26408
+    },
+    {
+      "folder": "scigym",
+      "name": "SciGym",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 6,
+      "n_items": 959,
+      "n_responses": 5754
+    },
+    {
+      "folder": "sgrades",
+      "name": "S-GRADES",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Recorded predicted category differs from original reference",
+        "1": "Recorded predicted category matches original reference"
+      },
+      "n_subjects": 77,
+      "n_items": 40509,
+      "n_responses": 1444320
+    },
+    {
+      "folder": "sib200",
+      "name": "SIB-200",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Released predicted category differs from the reference",
+        "1": "Released predicted category matches the reference"
+      },
+      "n_subjects": 3343,
+      "n_items": 83640,
+      "n_responses": 765204
+    },
+    {
+      "folder": "sketchjudge",
+      "name": "SketchJudge",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Model verdict disagrees with the expert label",
+        "1": "Model verdict agrees with the expert label"
+      },
+      "n_subjects": 38,
+      "n_items": 4053,
+      "n_responses": 38564
+    },
+    {
+      "folder": "software_world_models",
+      "name": "Software World Models (DL4C'26)",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "incorrect or unsolved",
+        "1": "correct or solved"
+      },
+      "n_subjects": 18,
+      "n_items": 434,
+      "n_responses": 7830
+    },
+    {
+      "folder": "stanford_orb",
+      "name": "Stanford-ORB",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 13,
+      "n_items": 630,
+      "n_responses": 5670
+    },
+    {
+      "folder": "statqa",
+      "name": "StatQA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Does not pass the released joint-selection scorer, including parser failures",
+        "1": "Both selected column and method sets pass the released scorer"
+      },
+      "n_subjects": 46,
+      "n_items": 1183,
+      "n_responses": 53498
+    },
+    {
+      "folder": "subjective_qa",
+      "name": "SubjECTive-QA",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Parsed model rating differs from the released human class",
+        "1": "Parsed model rating equals the released human class"
+      },
+      "n_subjects": 5,
+      "n_items": 10921,
+      "n_responses": 16168
+    },
+    {
+      "folder": "sugarcrepe",
+      "name": "SugarCrepe",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The released answer is marked incorrect.",
+        "1": "The released answer is marked correct."
+      },
+      "n_subjects": 1,
+      "n_items": 15024,
+      "n_responses": 15024
+    },
+    {
+      "folder": "summeval",
+      "name": "SummEval",
+      "response_type": "likert_5",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 16,
+      "n_items": 800,
+      "n_responses": 51200
+    },
+    {
+      "folder": "sustainable_food",
+      "name": "Sustainable Food Recipe Preference Prediction",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Parsed choice differs from the higher-rated recipe",
+        "1": "Parsed choice matches the higher-rated recipe"
+      },
+      "n_subjects": 6,
+      "n_items": 500,
+      "n_responses": 3000
+    },
+    {
+      "folder": "svrpbench",
+      "name": "SVRPBench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 4,
+      "n_items": 40,
+      "n_responses": 160
+    },
+    {
+      "folder": "swe_rebench",
+      "name": "SWE-rebench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 1,
+      "n_items": 6306,
+      "n_responses": 67074
+    },
+    {
+      "folder": "swe_smith",
+      "name": "SWE-smith",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "not resolved",
+        "1": "resolved"
+      },
+      "n_subjects": 3,
+      "n_items": 15616,
+      "n_responses": 49897
+    },
+    {
+      "folder": "swe_together",
+      "name": "SWE-Together",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "published judge score below 0.85",
+        "1": "published judge score at least 0.85"
+      },
+      "n_subjects": 20,
+      "n_items": 109,
+      "n_responses": 4341
+    },
+    {
+      "folder": "swebench_live",
+      "name": "SWE-bench-Live",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 65,
+      "n_items": 2202,
+      "n_responses": 14613
+    },
+    {
+      "folder": "swepolybench",
+      "name": "SWE-PolyBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 7,
+      "n_items": 547,
+      "n_responses": 1871
+    },
+    {
+      "folder": "synthpai",
+      "name": "SynthPAI",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Incorrect first guess",
+        "0.5": "Partially correct first guess",
+        "1": "Correct first guess"
+      },
+      "n_subjects": 18,
+      "n_items": 9220,
+      "n_responses": 12578
+    },
+    {
+      "folder": "tabarena",
+      "name": "TabArena",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 384,
+      "n_items": 346195,
+      "n_responses": 2457106
+    },
+    {
+      "folder": "tau2_bench",
+      "name": "tau2-bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 31,
+      "n_items": 2388,
+      "n_responses": 23342
+    },
+    {
+      "folder": "taubench",
+      "name": "tau-bench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 49,
+      "n_items": 201,
+      "n_responses": 4330
+    },
+    {
+      "folder": "tengu",
+      "name": "Tengu-Bench",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 647,
+      "n_items": 840,
+      "n_responses": 192575
+    },
+    {
+      "folder": "tensortrust",
+      "name": "Tensor Trust",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "unordered",
+      "meanings": {
+        "0": "The released output does not satisfy the access-granted matcher.",
+        "1": "The released output satisfies the access-granted matcher."
+      },
+      "n_subjects": 3,
+      "n_items": 570791,
+      "n_responses": 681726
+    },
+    {
+      "folder": "theagentcompany",
+      "name": "TheAgentCompany",
+      "response_type": "fraction",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 19,
+      "n_items": 175,
+      "n_responses": 3057
+    },
+    {
+      "folder": "threeeed",
+      "name": "3EED",
+      "response_type": "continuous",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": null,
+      "n_subjects": 4,
+      "n_items": 8616,
+      "n_responses": 17232
+    },
+    {
+      "folder": "truthfulqa_mc",
+      "name": "TruthfulQA-MC",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "MC1 incorrect",
+        "1": "MC1 correct"
+      },
+      "n_subjects": 150,
+      "n_items": 817,
+      "n_responses": 122550
+    },
+    {
+      "folder": "tulu_human_eval",
+      "name": "Tulu Human Evaluation",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Human rater marked the completion unacceptable",
+        "1": "Human rater marked the completion acceptable"
+      },
+      "n_subjects": 4,
+      "n_items": 1028,
+      "n_responses": 2300
+    },
+    {
+      "folder": "tumlu",
+      "name": "TUMLU",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The upstream parser did not extract the recorded correct choice.",
+        "1": "The upstream parser extracted the recorded correct choice."
+      },
+      "n_subjects": 30,
+      "n_items": 133944,
+      "n_responses": 143316
+    },
+    {
+      "folder": "txbench_pp",
+      "name": "TxBench-PP",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Published endpoint failure",
+        "1": "Published endpoint success"
+      },
+      "n_subjects": 16,
+      "n_items": 12,
+      "n_responses": 576
+    },
+    {
+      "folder": "ultrafeedback",
+      "name": "UltraFeedback",
+      "response_type": "likert_5",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "1": "Original level 1 of the item-specific aspect rubric",
+        "2": "Original level 2 of the item-specific aspect rubric",
+        "3": "Original level 3 of the item-specific aspect rubric",
+        "4": "Original level 4 of the item-specific aspect rubric",
+        "5": "Original level 5 of the item-specific aspect rubric"
+      },
+      "n_subjects": 743,
+      "n_items": 255820,
+      "n_responses": 1023456
+    },
+    {
+      "folder": "vhelm",
+      "name": "VHELM",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 112,
+      "n_items": 93127,
+      "n_responses": 931478
+    },
+    {
+      "folder": "visit_bench",
+      "name": "VisIT-Bench",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 19,
+      "n_items": 2391,
+      "n_responses": 71406
+    },
+    {
+      "folder": "visual_memory",
+      "name": "Visual Memory: ImageNet-A, ImageNet-R and ImageNetV2 retrieval results",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "The recorded nearest neighbor belongs to a different class.",
+        "1": "The recorded nearest neighbor belongs to the reference class."
+      },
+      "n_subjects": 5,
+      "n_items": 47500,
+      "n_responses": 237500
+    },
+    {
+      "folder": "visual_riddles",
+      "name": "Visual Riddles",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Human majority judges the answer incorrect",
+        "1": "Human majority judges the answer correct"
+      },
+      "n_subjects": 8,
+      "n_items": 793,
+      "n_responses": 3186
+    },
+    {
+      "folder": "visualwebarena",
+      "name": "VisualWebArena",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "unsuccessful",
+        "1": "successful"
+      },
+      "n_subjects": 5,
+      "n_items": 200,
+      "n_responses": 600
+    },
+    {
+      "folder": "vl_rewardbench",
+      "name": "VL-RewardBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "disagrees with reference preference",
+        "1": "agrees with reference preference"
+      },
+      "n_subjects": 16,
+      "n_items": 1532,
+      "n_responses": 111452
+    },
+    {
+      "folder": "weavebench",
+      "name": "WeaveBench",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "published final score below 0.80",
+        "1": "published final score at least 0.80"
+      },
+      "n_subjects": 7,
+      "n_items": 114,
+      "n_responses": 114
+    },
+    {
+      "folder": "wikihow_agent",
+      "name": "WikiHowAgent",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "completion marker absent",
+        "1": "completion marker present"
+      },
+      "n_subjects": 12,
+      "n_items": 14287,
+      "n_responses": 171412
+    },
+    {
+      "folder": "wildvision",
+      "name": "WildVision-Bench",
+      "response_type": "ordinal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "Worse++",
+        "0.25": "Worse",
+        "0.5": "Tie",
+        "0.75": "Better",
+        "1": "Better++"
+      },
+      "n_subjects": 22,
+      "n_items": 500,
+      "n_responses": 11000
+    },
+    {
+      "folder": "wmt_mqm",
+      "name": "WMT MQM: per-rater error indicators",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "lower_is_better",
+      "meanings": {
+        "0": "The rater recorded no error in this declared category/severity bucket.",
+        "1": "The rater recorded at least one error in this declared category/severity bucket."
+      },
+      "n_subjects": 113,
+      "n_items": 207090,
+      "n_responses": 4879368
+    },
+    {
+      "folder": "wonderbread",
+      "name": "WONDERBREAD",
+      "response_type": "mixed",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": null,
+      "meanings": null,
+      "n_subjects": 38,
+      "n_items": 9091,
+      "n_responses": 21231
+    },
+    {
+      "folder": "workarena",
+      "name": "WorkArena",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "unsuccessful",
+        "1": "successful"
+      },
+      "n_subjects": 8,
+      "n_items": 385,
+      "n_responses": 475
+    },
+    {
+      "folder": "workbench_revisited",
+      "name": "WorkBench Revisited",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "failure",
+        "1": "success"
+      },
+      "n_subjects": 24,
+      "n_items": 690,
+      "n_responses": 16560
+    },
+    {
+      "folder": "worldcentralbanks",
+      "name": "WorldCentralBanks: released LLM classifications",
+      "response_type": "binary",
+      "granularity": "item",
+      "eligible_by_type": true,
+      "direction": "higher_is_better",
+      "meanings": {
+        "0": "A completed prediction disagrees with the reference label.",
+        "1": "The extracted prediction matches the reference label."
+      },
+      "n_subjects": 10,
+      "n_items": 119925,
+      "n_responses": 405600
+    },
+    {
+      "folder": "xstest",
+      "name": "XSTest",
+      "response_type": "nominal",
+      "granularity": "item",
+      "eligible_by_type": false,
+      "direction": "unordered",
+      "meanings": {
+        "1": "Full compliance",
+        "2": "Full refusal",
+        "3": "Partial refusal"
+      },
+      "n_subjects": 5,
+      "n_items": 2250,
+      "n_responses": 11250
+    }
+  ],
+  "failures": []
+}

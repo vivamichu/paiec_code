@@ -1,0 +1,20 @@
+1195 groups loaded
+scoring constant 0.5 ...
+scoring empirical mean (organisers) ...
+scoring S0 smoothed (p0 0.33, k 5) ...
+scoring S1 smoothed (p0 0.5, k 2) ...
+saved /Users/vivamichu/Desktop/starting_kit/results/final_eval.csv
+
+                                 b0      b1      b3      b7     b15     b31     alc
+model                                                                              
+S0 smoothed (p0 0.33, k 5)   0.2499  0.2268  0.2067  0.1915  0.1819  0.1769  0.2041
+S1 smoothed (p0 0.5, k 2)    0.2500  0.2198  0.2023  0.1888  0.1808  0.1763  0.2010
+constant 0.5                 0.2500  0.2500  0.2500  0.2500  0.2500  0.2500  0.2500
+empirical mean (organisers)  0.2500  0.3262  0.2255  0.1933  0.1821  0.1766  0.2281
+
+ALC difference to S1 smoothed (p0 0.5, k 2) (mean over draws, standard error):
+  constant 0.5                   +0.0486  (se 0.0040)
+  empirical mean (organisers)    +0.0271  (se 0.0023)
+  S0 smoothed (p0 0.33, k 5)     +0.0043  (se 0.0025)
+
+groups scored per draw: mean 3.3  distinct benchmarks: 78

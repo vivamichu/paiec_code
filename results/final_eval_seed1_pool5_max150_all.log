@@ -1,0 +1,37 @@
+dropped 20 groups from withheld benchmarks
+1175 groups loaded
+scoring constant 0.5 ...
+scoring empirical mean (organisers) ...
+scoring S0 smoothed (p0 0.33, k 5) ...
+scoring S1 smoothed (p0 0.5, k 2) ...
+scoring S2 S1 + same-item siblings ...
+scoring S3 S2 + benchmark siblings ...
+scoring S4 S3 + public track record ...
+scoring S4b S3 + Claude prior ...
+scoring S4c S4b retuned ...
+saved /Users/vivamichu/Desktop/starting_kit/results/final_eval_seed1_pool5_max150_all.csv
+
+                                 b0      b1      b3      b7     b15     b31     alc
+model                                                                              
+S0 smoothed (p0 0.33, k 5)   0.2346  0.2148  0.1948  0.1776  0.1669  0.1625  0.1905
+S1 smoothed (p0 0.5, k 2)    0.2500  0.2172  0.1915  0.1744  0.1661  0.1623  0.1911
+S2 S1 + same-item siblings   0.2500  0.2171  0.1910  0.1732  0.1639  0.1584  0.1899
+S3 S2 + benchmark siblings   0.2500  0.2090  0.1863  0.1715  0.1632  0.1584  0.1868
+S4 S3 + public track record  0.2520  0.2098  0.1861  0.1714  0.1632  0.1584  0.1871
+S4b S3 + Claude prior        0.2026  0.1905  0.1800  0.1685  0.1615  0.1576  0.1761
+S4c S4b retuned              0.2026  0.1889  0.1775  0.1669  0.1601  0.1570  0.1746
+constant 0.5                 0.2500  0.2500  0.2500  0.2500  0.2500  0.2500  0.2500
+empirical mean (organisers)  0.2500  0.3182  0.2137  0.1792  0.1672  0.1627  0.2169
+
+ALC difference to S1 smoothed (p0 0.5, k 2) (mean over draws, standard error):
+  constant 0.5                   +0.0593  (se 0.0050)
+  empirical mean (organisers)    +0.0257  (se 0.0026)
+  S0 smoothed (p0 0.33, k 5)     -0.0004  (se 0.0026)
+  S2 S1 + same-item siblings     -0.0011  (se 0.0002)
+  S3 S2 + benchmark siblings     -0.0042  (se 0.0006)
+  S4 S3 + public track record    -0.0039  (se 0.0007)
+  S4b S3 + Claude prior          -0.0149  (se 0.0018)
+  S4c S4b retuned                -0.0163  (se 0.0022)
+
+groups scored per draw: mean 8.6  distinct benchmarks: 22
+share of pairs with a sibling in their draw: 0.78

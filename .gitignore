@@ -1,0 +1,27 @@
+# keys
+.env
+submission_config.json
+dist/
+*.zip
+
+# data (download with dev/download_dataset.py)
+data/measurement-db
+/measurement-db
+data/cache/groups.pkl
+data/cache/rates.parquet
+
+# organizers' code (copy from the starting kit, not ours to publish)
+sample_code_submission/
+paiec_baseline/
+
+# local notes
+TODO.md
+ISSUES.md
+DONE.md
+REPORT_NOTES.md
+GIT.md
+CLAUDE.md
+
+__pycache__/
+.venv/
+.DS_Store
