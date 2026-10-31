@@ -93,15 +93,13 @@ otherwise `final_eval.py` skips those two rows.
 
 | Report claim | Script |
 | --- | --- |
+| About 85% of the error comes from differences between questions; empirical Bayes gives no gain | `dev/eb_potential.py` |
+| Same-question correlation between subjects (0.42, Step 2) | `dev/same_item_corr.py` |
 | Question text does not predict difficulty within a benchmark | `dev/item_difficulty_check.py`, `dev/feature_signal_check.py`, `dev/feature_columns_check.py` |
 | Public track record (dead end) | `dev/rates_table.py`, `dev/build_track_record.py`, `dev/strength_check.py` |
 | First language-model test (200 questions) | `dev/llm_prior_test.py`, `dev/llm_prior_analysis.py` (prompt in `dev/my_prompt.py`) |
 | Step 1 tuning with the first simulator | `dev/tune_smoothed.py`, `dev/simulate_alc.py` (reads `measurement-db/` at the repository root, not `data/measurement-db/`) |
 | Data download and checks | `dev/download_dataset.py`, `dev/inspect_dataset.py`, `dev/list_hf_repo.py` |
-
-Two numbers came from short scratch scripts that are not in this repository: the share of
-error due to differences between questions (about 85%) and the same-question correlation
-between subjects (0.42).
 
 ## Collect new language-model replies (paid)
 
