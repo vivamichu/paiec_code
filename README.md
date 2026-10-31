@@ -74,6 +74,13 @@ Haiku 5.5 vs Sonnet 5.5:
 .venv/bin/python dev/final_eval.py --draws 30 --seed 1 --pool 5 --max-group-items 150 --models "S3 S2 + benchmark siblings" "S4b S3 + Claude prior" "S4b Haiku, last line" "S4b Sonnet 5.5, last line" --reference "S4b Haiku, last line" --tag sonnet
 ```
 
+Claude models vs OpenAI's GPT-5 nano, and how each model's raw guesses compare with the real
+pass rates:
+```
+.venv/bin/python dev/final_eval.py --draws 30 --seed 1 --pool 5 --max-group-items 150 --models "S3 S2 + benchmark siblings" "S4b S3 + Claude prior" "S4b Haiku, last line" "S4b Sonnet 5.5, last line" "S4b GPT-5 nano, last line" --reference "S4b Haiku, last line" --tag nano
+.venv/bin/python dev/compare_llm_guesses.py --draws 30 --seed 1 --pool 5 --max-group-items 150
+```
+
 Tune a setting on the tuning rounds (seed 0):
 ```
 .venv/bin/python dev/tune_sibling.py --folder <model folder> --constant <name> --values ...
@@ -94,7 +101,8 @@ otherwise `final_eval.py` skips those two rows.
 | Report claim | Script |
 | --- | --- |
 | About 85% of the error comes from differences between questions; empirical Bayes gives no gain | `dev/eb_potential.py` |
-| Same-question correlation between subjects (0.42, Step 2) | `dev/same_item_corr.py` |
+| Same-question correlation between subjects (0.41, Step 2) | `dev/same_item_corr.py` |
+| Benchmark difficulty shared between subjects (0.43 and 0.65, Step 3) | `dev/sibling_rate_corr.py` |
 | Question text does not predict difficulty within a benchmark | `dev/item_difficulty_check.py`, `dev/feature_signal_check.py`, `dev/feature_columns_check.py` |
 | Public track record (dead end) | `dev/rates_table.py`, `dev/build_track_record.py`, `dev/strength_check.py` |
 | First language-model test (200 questions) | `dev/llm_prior_test.py`, `dev/llm_prior_analysis.py` (prompt in `dev/my_prompt.py`) |
@@ -111,6 +119,8 @@ sent. `--max-dollars` stops the run at that spend.
 ```
 
 Add `--model claude-sonnet-5-5` for the Sonnet comparison (about $45 for the 8,506 questions).
+Add `--model gpt-5-nano --flex` for the OpenAI comparison; it needs `OPENAI_API_KEY` and costs
+about $1 at list price (`--flex` asks for OpenAI's cheaper, slower tier).
 New calls can give slightly different replies from ours.
 
 ## Build the competition zip

@@ -8,6 +8,7 @@ Costs:  set -a; source .env; set +a
         .venv/bin/python dev/prefetch_llm.py --draws 20 --seed 0 --pool 5 --max-dollars 1.0
 Stop any time with Ctrl-C: replies already paid for stay in the cache.
 --model asks a different Claude model (same prompt); --limit N asks only N random prompts (a pilot).
+OpenAI models (--model gpt-5-nano) need OPENAI_API_KEY; --flex uses OpenAI's half-price tier.
 """
 
 import argparse
@@ -31,10 +32,14 @@ parser.add_argument("--max-group-items", type=int, default=250)
 parser.add_argument("--threads", type=int, default=8)
 parser.add_argument("--max-dollars", type=float, default=1.0)
 parser.add_argument("--dry-run", action="store_true", help="only count prompts and estimate cost")
-parser.add_argument("--model", default="claude-haiku-5-5", help="Claude model to ask")
+parser.add_argument("--model", default="claude-haiku-5-5", help="model to ask (Claude, or OpenAI gpt-*)")
 parser.add_argument("--limit", type=int, default=0, help="ask only this many random prompts (pilot)")
+parser.add_argument("--effort", default="low", help="reasoning effort (all our runs use low)")
+parser.add_argument("--flex", action="store_true", help="OpenAI only: half-price Flex tier")
 args = parser.parse_args()
 claude_client.set_model(args.model)
+if args.flex:
+    claude_client.SERVICE_TIER = "flex"
 
 # the measured cost per call is for Haiku; other models cost more per token
 # (and may think longer, so treat their estimate as a lower bound)
@@ -63,7 +68,7 @@ evaluator.evaluate(record, groups, args.draws, args.seed, args.pool, args.max_gr
 
 missing = []
 for prompt in prompts:
-    key = claude_client.make_key(prompt, None, 2000, "low", None)
+    key = claude_client.make_key(prompt, None, 2000, args.effort, None)
     if key not in claude_client._cache:
         missing.append(prompt)
 print("model:", args.model)
@@ -84,7 +89,7 @@ def fetch(prompt):
         done["skipped"] = done["skipped"] + 1
         return
     try:
-        claude_client.ask(prompt, max_tokens=2000, effort="low")
+        claude_client.ask(prompt, max_tokens=2000, effort=args.effort)
     except Exception as error:
         done["failed"] = done["failed"] + 1
         if done["failed"] <= 3:
@@ -112,7 +117,7 @@ guesses = []
 unreadable = 0
 unreadable_first = 0
 for prompt in missing:
-    key = claude_client.make_key(prompt, None, 2000, "low", None)
+    key = claude_client.make_key(prompt, None, 2000, args.effort, None)
     if key in claude_client._cache:
         row = claude_client._cache[key]
         reason = str(row["stop_reason"])

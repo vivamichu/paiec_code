@@ -1,4 +1,4 @@
-"""Success rate of every subject on every benchmark (all 163 binary benchmarks).
+"""Success rate of every subject on every PUBLIC benchmark (withheld ones are dropped).
 
 One row per subject per benchmark. Columns:
   bench, subject_id, n_items, rate, normalized_name, provider
@@ -11,10 +11,14 @@ leave-one-benchmark-out, otherwise it sees the answers.
     rates = load_rates()
 """
 
+import sys
 from pathlib import Path
 
 import pandas as pd
 import pyarrow.parquet as pq
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import evaluator
 
 KIT = Path(__file__).resolve().parents[1]
 DB = KIT / "data" / "measurement-db"
@@ -59,11 +63,18 @@ def rates_for_benchmark(bench):
 
 def load_rates(rebuild=False):
     if CACHE.exists() and not rebuild:
-        return pd.read_parquet(CACHE)
+        rates = pd.read_parquet(CACHE)
+        # an old cache may still hold withheld benchmarks
+        public = []
+        for bench in rates.bench:
+            public.append(evaluator.is_public(bench))
+        return rates[public].reset_index(drop=True)
 
     tables = []
     for folder in sorted(DB.iterdir()):
         if not (folder / "formatted_tables" / "responses.parquet").exists():
+            continue
+        if not evaluator.is_public(folder.name):
             continue
         try:
             table = rates_for_benchmark(folder.name)

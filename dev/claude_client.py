@@ -4,7 +4,7 @@ ask(prompt) returns the reply text and records tokens and cost.
 Every reply is saved in data/cache/claude_replies.jsonl, so asking the same
 prompt again is free.
 
-The key is read from ANTHROPIC_API_KEY. It is never printed.
+The key is read from ANTHROPIC_API_KEY (OPENAI_API_KEY for gpt-* models). It is never printed.
 """
 
 import hashlib
@@ -21,10 +21,13 @@ KIT = Path(__file__).resolve().parents[1]
 REPLY_CACHE = KIT / "data" / "cache" / "claude_replies.jsonl"
 
 # dollars per million tokens (input, output); Haiku price is for prompts up to 100K
+# OpenAI models (gpt-*) use the standard tier price; Flex is cheaper, so the dollar cap over-counts (safe side)
 PRICES = {
     "claude-haiku-5-5": (0.10, 0.50),
     "claude-sonnet-5-5": (2.00, 10.00),
+    "gpt-5-nano": (0.05, 0.40),
 }
+SERVICE_TIER = None   # "flex" asks OpenAI for its half-price, slower tier
 
 MODEL = "claude-haiku-5-5"
 PRICE_IN = 0.10 / 1000000    # dollars per input token
@@ -103,6 +106,10 @@ def ask(prompt, system=None, max_tokens=2000, effort="low", thinking=None):
         totals["cached"] = totals["cached"] + 1
         return _cache[key]["text"]
 
+    if MODEL.startswith("gpt-"):
+        text, stop_reason, usage = ask_openai(prompt, max_tokens, effort)
+        return record_reply(key, text, stop_reason, usage)
+
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if api_key == "":
         raise RuntimeError("ANTHROPIC_API_KEY is not set in this shell")
@@ -144,10 +151,81 @@ def ask(prompt, system=None, max_tokens=2000, effort="low", thinking=None):
     for block in result["content"]:
         if block["type"] == "text":
             text = text + block["text"]
-    usage = result["usage"]
+    return record_reply(key, text, result.get("stop_reason"), result["usage"])
+
+
+def ask_openai(prompt, max_tokens, effort):
+    """One OpenAI Responses call. Returns (text, stop_reason, usage) with Claude's stop reason names.
+
+    max_output_tokens includes the hidden reasoning tokens, like Claude's thinking.
+    """
+    api_key = os.environ.get("OPENAI_API_KEY", "")
+    if api_key == "":
+        raise RuntimeError("OPENAI_API_KEY is not set in this shell")
+
+    body = {
+        "model": MODEL,
+        "input": prompt,
+        "max_output_tokens": max_tokens,
+        "reasoning": {"effort": effort},
+        "store": False,
+    }
+    if SERVICE_TIER:
+        body["service_tier"] = SERVICE_TIER
+
+    result = None
+    for attempt in range(4):
+        request = urllib.request.Request(
+            "https://api.openai.com/v1/responses",
+            data=json.dumps(body).encode(),
+            headers={
+                "Authorization": "Bearer " + api_key,
+                "content-type": "application/json",
+            },
+        )
+        try:
+            # Flex replies can take minutes
+            with urllib.request.urlopen(request, timeout=900) as response:
+                result = json.loads(response.read())
+            break
+        except urllib.error.HTTPError as error:
+            detail = error.read().decode()[:300]
+            # out of credit: stop now instead of retrying
+            if error.code in (429, 500, 502, 503) and attempt < 3 and "insufficient_quota" not in detail:
+                time.sleep(2 ** attempt * 2)   # wait and try again
+                continue
+            raise RuntimeError("OpenAI API error " + str(error.code) + ": " + detail)
+
+    # same stop reasons as Claude: end_turn, max_tokens, refusal
+    text = ""
+    stop_reason = "end_turn"
+    for item in result.get("output", []):
+        if item.get("type") != "message":
+            continue
+        for part in item.get("content", []):
+            if part.get("type") == "output_text":
+                text = text + part["text"]
+            elif part.get("type") == "refusal":
+                text = text + part.get("refusal", "")
+                stop_reason = "refusal"
+    if result.get("status") == "incomplete":
+        reason = (result.get("incomplete_details") or {}).get("reason")
+        if reason == "max_output_tokens":
+            stop_reason = "max_tokens"
+        elif reason == "content_filter":
+            stop_reason = "refusal"
+        else:
+            stop_reason = str(reason)
+    usage = {"input_tokens": result["usage"]["input_tokens"],
+             "output_tokens": result["usage"]["output_tokens"]}
+    return text, stop_reason, usage
+
+
+def record_reply(key, text, stop_reason, usage):
+    """Add one paid reply to the totals and the cache file. Returns the text."""
     dollars = usage["input_tokens"] * PRICE_IN + usage["output_tokens"] * PRICE_OUT
 
-    row = {"key": key, "text": text, "stop_reason": result.get("stop_reason"),
+    row = {"key": key, "text": text, "stop_reason": stop_reason,
            "input_tokens": usage["input_tokens"], "output_tokens": usage["output_tokens"]}
     with _lock:
         totals["calls"] = totals["calls"] + 1

@@ -36,14 +36,16 @@ MODELS = {
     "S4c S4b retuned": KIT / "my_model6",
     "S4b Haiku, last line": KIT / "my_model5",
     "S4b Sonnet 5.5, last line": KIT / "my_model5",
+    "S4b GPT-5 nano, last line": KIT / "my_model5",
 }
-# models that read another Claude model's cached replies (default: Haiku 5.5)
+# models that read another model's cached replies (default: Haiku 5.5)
 LLM_MODEL = {
     "S4b Sonnet 5.5, last line": "claude-sonnet-5-5",
+    "S4b GPT-5 nano, last line": "gpt-5-nano",
 }
 # models that read only the LAST line of each reply (Sonnet explains first, then gives the number)
 # and treat a refused reply as no guess
-LAST_LINE = ["S4b Haiku, last line", "S4b Sonnet 5.5, last line"]
+LAST_LINE = ["S4b Haiku, last line", "S4b Sonnet 5.5, last line", "S4b GPT-5 nano, last line"]
 
 
 def reply_without_refusals(prompt):

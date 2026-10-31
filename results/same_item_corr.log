@@ -1,0 +1,3 @@
+benchmarks with >= 2 subjects: 75  item pairs: 30304
+pooled corr(B residual, A residual): 0.411
+per-benchmark corr: median 0.375  25% 0.250  75% 0.493

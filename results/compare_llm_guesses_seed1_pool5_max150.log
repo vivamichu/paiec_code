@@ -1,0 +1,12 @@
+items: 8506
+
+real pass rate: mean 0.326
+model                answered mean guess       corr    Brier raw    Brier 0.5
+claude-haiku-5-5         8493      0.336      0.366       0.1959       0.2500
+claude-sonnet-5-5        8441      0.388      0.423       0.1886       0.2500
+gpt-5-nano               8503      0.499      0.122       0.2618       0.2500
+
+correlation between guesses, on the 8427 items every model answered:
+  claude-haiku-5-5   claude-sonnet-5-5  0.749
+  claude-haiku-5-5   gpt-5-nano         0.404
+  claude-sonnet-5-5  gpt-5-nano         0.307

@@ -1,0 +1,3 @@
+pairs 12972 benchmarks 129
+corr(rate, mean of all other subjects): 0.649
+corr(rate, one random other subject): 0.431

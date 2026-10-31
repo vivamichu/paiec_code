@@ -1,0 +1,19 @@
+pairs 10208 benchmarks 92
+
+smooth 0.02  pairs scored 10208
+  ALC part from pair-rate error:  S1 0.0313   EB 0.0399   diff +0.0087 (se 0.0002)
+  budget  0: S1 0.0769  EB 0.1045
+  budget  1: S1 0.0534  EB 0.0704
+  budget  3: S1 0.0331  EB 0.0406
+  budget  7: S1 0.0188  EB 0.0219
+  budget 15: S1 0.0100  EB 0.0115
+  budget 31: S1 0.0052  EB 0.0059
+
+smooth 0.05  pairs scored 10208
+  ALC part from pair-rate error:  S1 0.0313   EB 0.0397   diff +0.0084 (se 0.0002)
+  budget  0: S1 0.0769  EB 0.1034
+  budget  1: S1 0.0534  EB 0.0698
+  budget  3: S1 0.0331  EB 0.0406
+  budget  7: S1 0.0188  EB 0.0219
+  budget 15: S1 0.0100  EB 0.0114
+  budget 31: S1 0.0052  EB 0.0058
