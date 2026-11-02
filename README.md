@@ -26,9 +26,13 @@ python -m venv .venv
 ```
 
 Download the public data (measurement-db at the revision pinned in
-`data/benchmark_inventory.json`, about 5.7 GB, saved to `data/measurement-db/`):
+`data/benchmark_inventory.json`, about 5.7 GB, saved to `data/measurement-db/`).
+The dataset is gated: first accept its terms at
+https://huggingface.co/datasets/aims-foundations/measurement-db while logged in to
+Hugging Face, then log in on your machine with an access token:
 
 ```
+.venv/bin/hf auth login
 .venv/bin/python dev/download_dataset.py
 ```
 
