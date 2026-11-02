@@ -133,3 +133,8 @@ Copy `my_model5/submission_config.example.json` to `my_model5/submission_config.
 your own key in it, then run `.venv/bin/python dev/package_s4b.py`. The zip contains your key:
 do not share it. The packaging script validates the zip with the organizers'
 `paiec_baseline/check_submission_zip.py` when that file is present.
+
+## License
+
+CC BY 4.0 (see `LICENSE`), except `data/benchmark_inventory.json`, which is derived from
+measurement-db and stays under its license, CC BY-SA 4.0.
